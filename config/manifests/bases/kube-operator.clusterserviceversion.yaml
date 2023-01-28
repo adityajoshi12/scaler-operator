@@ -1,0 +1,48 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  annotations:
+    alm-examples: '[]'
+    capabilities: Basic Install
+  name: scaler-operator.v0.0.0
+  namespace: placeholder
+spec:
+  apiservicedefinitions: {}
+  customresourcedefinitions:
+    owned:
+    - description: ResourceCreator is the Schema for the resourcecreators API
+      displayName: Resource Creator
+      kind: ResourceCreator
+      name: resourcecreators.api.adityajoshi.online
+      version: v1alpha1
+  description: create deployment, service and ingress
+  displayName: ResourceCreator
+  icon:
+  - base64data: ""
+    mediatype: ""
+  install:
+    spec:
+      deployments: null
+    strategy: ""
+  installModes:
+  - supported: false
+    type: OwnNamespace
+  - supported: false
+    type: SingleNamespace
+  - supported: false
+    type: MultiNamespace
+  - supported: true
+    type: AllNamespaces
+  keywords:
+  - opertor
+  - automation
+  links:
+  - name: Kube Operator
+    url: https://scaler-operator.domain
+  maintainers:
+  - email: aditya@mail.com
+    name: aditya
+  maturity: alpha
+  provider:
+    name: aditya
+  version: 0.0.0

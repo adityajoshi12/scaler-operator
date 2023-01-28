@@ -1,0 +1,24 @@
+# permissions for end users to edit resourcecreators.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: resourcecreator-editor-role
+rules:
+- apiGroups:
+  - api.adityajoshi.online
+  resources:
+  - resourcecreators
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - api.adityajoshi.online
+  resources:
+  - resourcecreators/status
+  verbs:
+  - get

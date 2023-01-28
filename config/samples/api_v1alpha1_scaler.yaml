@@ -1,0 +1,26 @@
+apiVersion: api.adityajoshi.online/v1alpha1
+kind: Scaler
+metadata:
+  name: scaler-sample-0-6
+spec:
+  start: 0 #12AM
+  end: 6 # 6AM
+  replicas: 2
+  deployments:
+    - name: nginx
+      namespace: default
+
+
+---
+apiVersion: api.adityajoshi.online/v1alpha1
+kind: Scaler
+metadata:
+  name: scaler-sample
+spec:
+  start: 7 #12AM
+  end: 23 # 6AM
+  replicas: 4
+  deployments:
+    - name: nginx
+      namespace: default
+
